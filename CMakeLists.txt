@@ -3,7 +3,8 @@ set(LLVM_LINK_COMPONENTS
   BitReader
   BitWriter
   IPO
-  SPIRVLib
+  SPIRVlibSPIRV
+  SPIRVCodeGen
   Core
   Support
   TransformUtils
