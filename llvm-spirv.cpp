@@ -193,7 +193,7 @@ convertSPIRVToLLVM() {
   }
 
   std::error_code EC;
-  tool_output_file Out(OutputFile.c_str(), EC, sys::fs::F_None);
+  ToolOutputFile Out(OutputFile.c_str(), EC, sys::fs::F_None);
   if (EC) {
     errs() << "Fails to open output file: " << EC.message();
     return -1;
@@ -281,7 +281,7 @@ regularizeLLVM() {
   }
 
   std::error_code EC;
-  tool_output_file Out(OutputFile.c_str(), EC, sys::fs::F_None);
+  ToolOutputFile Out(OutputFile.c_str(), EC, sys::fs::F_None);
   if (EC) {
     errs() << "Fails to open output file: " << EC.message();
     return -1;
